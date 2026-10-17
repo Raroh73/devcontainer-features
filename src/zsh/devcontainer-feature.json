@@ -2,12 +2,15 @@
   "name": "Zsh configuration",
   "id": "zsh",
   "description": "Zsh configuration",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "customizations": {
     "vscode": {
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh"
       }
     }
-  }
+  },
+  "installsAfter": [
+    "ghcr.io/raroh73/devcontainer-features/update"
+  ]
 }
