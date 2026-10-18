@@ -2,7 +2,7 @@
   "name": "Zsh configuration",
   "id": "zsh",
   "description": "Zsh configuration",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "options": {
     "zim": {
       "type": "boolean",
