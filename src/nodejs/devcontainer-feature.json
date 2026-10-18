@@ -1,0 +1,21 @@
+{
+  "name": "Node.js",
+  "id": "nodejs",
+  "description": "Install Node.js",
+  "version": "0.0.1",
+  "options": {
+    "pm": {
+      "type": "string",
+      "description": "Which package manager to install",
+      "enum": [
+        "npm",
+        "pnpm",
+        "yarn"
+      ],
+      "default": "npm"
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/raroh73/devcontainer-features/update"
+  ]
+}
