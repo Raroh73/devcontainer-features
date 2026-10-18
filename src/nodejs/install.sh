@@ -14,7 +14,7 @@ case "${PACKAGE_MANAGER}" in
     dnf --assumeyes install nodejs-npm
     npm --version
     ;;
-  nnpm)
+  pnpm)
     dnf --assumeyes install pnpm
     pnpm --version
     ;;
