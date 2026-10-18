@@ -2,7 +2,14 @@
   "name": "Zsh configuration",
   "id": "zsh",
   "description": "Zsh configuration",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "options": {
+    "zim": {
+      "type": "boolean",
+      "description": "Install Zim?",
+      "default": true
+    }
+  },
   "customizations": {
     "vscode": {
       "settings": {
