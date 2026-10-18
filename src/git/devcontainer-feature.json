@@ -1,0 +1,9 @@
+{
+  "name": "Git",
+  "id": "git",
+  "description": "Install Git",
+  "version": "0.0.1",
+  "installsAfter": [
+    "ghcr.io/raroh73/devcontainer-features/update"
+  ]
+}
