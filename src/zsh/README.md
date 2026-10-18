@@ -11,7 +11,11 @@ Zsh configuration
 }
 ```
 
+## Options
 
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| zim | Install Zim? | boolean | true |
 
 
 
