@@ -3,7 +3,7 @@
 set -e
 
 echo "Installing Git..."
-dnf --assumeyes install git
+dnf --assumeyes install git-core
 git --version
 
 echo "Done!"
