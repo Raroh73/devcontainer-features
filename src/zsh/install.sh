@@ -3,7 +3,7 @@
 set -e
 
 echo "Installing Zsh..."
-dnf install -y which zsh
+dnf --assumeyes install which zsh
 zsh --version
 
 echo "Changing shell..."
