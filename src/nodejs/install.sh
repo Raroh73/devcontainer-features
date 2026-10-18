@@ -11,15 +11,15 @@ node --version
 echo "Installing selected package manager..."
 case "${PACKAGE_MANAGER}" in
   npm)
-    dnf --assume-yes install nodejs-npm
+    dnf --assumeyes install nodejs-npm
     npm --version
     ;;
   nnpm)
-    dnf --assume-yes install pnpm
+    dnf --assumeyes install pnpm
     pnpm --version
     ;;
   yarn)
-    dnf --assume-yes install yarnpkg
+    dnf --assumeyes install yarnpkg
     yarn --version
     ;;
 esac
