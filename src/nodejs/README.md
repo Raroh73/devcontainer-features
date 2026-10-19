@@ -1,7 +1,7 @@
 
 # Node.js (nodejs)
 
-Install Node.js
+Install Node.js.
 
 ## Example Usage
 
@@ -15,7 +15,7 @@ Install Node.js
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| pm | Which package manager to install | string | npm |
+| pm | Which package manager to install? | string | npm |
 
 
 

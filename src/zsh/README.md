@@ -1,7 +1,7 @@
 
-# Zsh configuration (zsh)
+# Zsh (zsh)
 
-Zsh configuration
+Install Zsh.
 
 ## Example Usage
 

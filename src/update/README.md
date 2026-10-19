@@ -1,7 +1,7 @@
 
 # Update (update)
 
-Update Dev Container
+Update Dev Container.
 
 ## Example Usage
 
