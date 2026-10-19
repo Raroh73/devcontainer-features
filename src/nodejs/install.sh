@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-PACKAGE_MANAGER="${PM:-"npm"}"
-
 set -e
+
+PACKAGE_MANAGER="${PM:-"npm"}"
 
 if [ "$(id --user)" -ne 0 ]; then
     echo 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'

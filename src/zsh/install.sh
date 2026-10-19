@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-ZIM="${ZIM:-"true"}"
-
 set -e
+
+ZIM="${ZIM:-"true"}"
 
 if [ "$(id --user)" -ne 0 ]; then
     echo 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
