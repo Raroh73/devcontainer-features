@@ -2,7 +2,7 @@
   "name": "Node.js",
   "id": "nodejs",
   "description": "Install Node.js.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "options": {
     "pm": {
       "type": "string",

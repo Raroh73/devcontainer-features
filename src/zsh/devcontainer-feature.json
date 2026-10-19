@@ -2,7 +2,7 @@
   "name": "Zsh",
   "id": "zsh",
   "description": "Install Zsh.",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "options": {
     "zim": {
       "type": "boolean",
