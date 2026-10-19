@@ -1,7 +1,7 @@
 
 # Git (git)
 
-Install Git
+Install Git.
 
 ## Example Usage
 
