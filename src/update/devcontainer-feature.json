@@ -1,6 +1,6 @@
 {
   "name": "Update",
   "id": "update",
-  "description": "Update Dev Container",
-  "version": "0.0.1"
+  "description": "Update Dev Container.",
+  "version": "0.0.2"
 }

@@ -1,8 +1,8 @@
 {
-  "name": "Zsh configuration",
+  "name": "Zsh",
   "id": "zsh",
-  "description": "Zsh configuration",
-  "version": "0.0.7",
+  "description": "Install Zsh.",
+  "version": "0.0.8",
   "options": {
     "zim": {
       "type": "boolean",

@@ -1,12 +1,12 @@
 {
   "name": "Node.js",
   "id": "nodejs",
-  "description": "Install Node.js",
-  "version": "0.0.3",
+  "description": "Install Node.js.",
+  "version": "0.0.4",
   "options": {
     "pm": {
       "type": "string",
-      "description": "Which package manager to install",
+      "description": "Which package manager to install?",
       "enum": [
         "npm",
         "pnpm",
