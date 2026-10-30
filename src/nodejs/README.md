@@ -15,6 +15,7 @@ Install Node.js.
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
+| nv | Which version of Node.js to install? | string | 26 |
 | pm | Which package manager to install? | string | npm |
 
 
