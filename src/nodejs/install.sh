@@ -2,6 +2,7 @@
 
 set -e
 
+NODEJS_VERSION="${NV:-"26"}"
 PACKAGE_MANAGER="${PM:-"npm"}"
 
 source /etc/os-release
@@ -13,7 +14,7 @@ fi
 
 case "${ID}" in
   fedora)
-    INSTALL_NODEJS=(dnf --assumeyes install nodejs)
+    INSTALL_NODEJS=(dnf --assumeyes install "nodejs${NODEJS_VERSION}")
     INSTALL_NPM=(dnf --assumeyes install nodejs-npm)
     INSTALL_PNPM=(dnf --assumeyes install pnpm)
     INSTALL_YARN=(dnf --assumeyes install yarnpkg)
