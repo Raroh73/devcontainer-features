@@ -14,10 +14,10 @@ fi
 
 case "${ID}" in
   fedora)
-    INSTALL_NODEJS=(dnf --assumeyes install "nodejs${NODEJS_VERSION}")
-    INSTALL_NPM=(dnf --assumeyes install nodejs-npm)
-    INSTALL_PNPM=(dnf --assumeyes install pnpm)
-    INSTALL_YARN=(dnf --assumeyes install yarnpkg)
+    INSTALL_NODEJS="dnf --assumeyes install nodejs${NODEJS_VERSION} && dnf clean all"
+    INSTALL_NPM="dnf --assumeyes install nodejs-npm && dnf clean all"
+    INSTALL_PNPM="dnf --assumeyes install pnpm && dnf clean all"
+    INSTALL_YARN="dnf --assumeyes install yarnpkg && dnf clean all"
     ;;
   *)
     echo "${NAME} currently is not supported."
@@ -26,21 +26,21 @@ case "${ID}" in
 esac
 
 echo "Installing Node.js..."
-"${INSTALL_NODEJS[@]}"
+eval "$INSTALL_NODEJS"
 node --version
 
 echo "Installing selected package manager..."
 case "${PACKAGE_MANAGER}" in
   npm)
-    "${INSTALL_NPM[@]}"
+    eval "$INSTALL_NPM"
     npm --version
     ;;
   pnpm)
-    "${INSTALL_PNPM[@]}"
+    eval "$INSTALL_PNPM"
     pnpm --version
     ;;
   yarn)
-    "${INSTALL_YARN[@]}"
+    eval "$INSTALL_YARN"
     yarn --version
     ;;
 esac

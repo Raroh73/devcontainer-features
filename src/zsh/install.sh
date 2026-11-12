@@ -13,7 +13,7 @@ fi
 
 case "${ID}" in
   fedora)
-    INSTALL_ZSH=(dnf --assumeyes install su which zsh)
+    INSTALL_ZSH="dnf --assumeyes install su which zsh && dnf clean all"
     ;;
   *)
     echo "${NAME} currently is not supported."
@@ -22,7 +22,7 @@ case "${ID}" in
 esac
 
 echo "Installing Zsh..."
-"${INSTALL_ZSH[@]}"
+eval "$INSTALL_ZSH"
 zsh --version
 
 echo "Changing shell..."

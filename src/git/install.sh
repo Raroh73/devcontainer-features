@@ -11,7 +11,7 @@ fi
 
 case "${ID}" in
   fedora)
-    INSTALL_GIT=(dnf --assumeyes install git-core)
+    INSTALL_GIT="dnf --assumeyes install git-core && dnf clean all"
     ;;
   *)
     echo "${NAME} currently is not supported."
@@ -20,7 +20,7 @@ case "${ID}" in
 esac
 
 echo "Installing Git..."
-"${INSTALL_GIT[@]}"
+eval "$INSTALL_GIT"
 git --version
 
 echo "Done!"

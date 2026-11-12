@@ -11,7 +11,7 @@ fi
 
 case "${ID}" in
   fedora)
-    UPDATE_PACKAGES=(dnf --assumeyes update)
+    UPDATE_PACKAGES="dnf --assumeyes update && dnf clean all"
     ;;
   *)
     echo "${NAME} currently is not supported."
@@ -20,6 +20,6 @@ case "${ID}" in
 esac
 
 echo "Updating Dev Container..."
-"${UPDATE_PACKAGES[@]}"
+eval "$UPDATE_PACKAGES"
 
 echo "Done!"
