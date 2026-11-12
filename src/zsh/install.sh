@@ -13,7 +13,7 @@ fi
 
 case "${ID}" in
   fedora)
-    INSTALL_ZSH=(dnf --assumeyes install which zsh)
+    INSTALL_ZSH=(dnf --assumeyes install su which zsh)
     ;;
   *)
     echo "${NAME} currently is not supported."
