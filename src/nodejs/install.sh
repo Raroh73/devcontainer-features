@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
 NODEJS_VERSION="${NV:-"26"}"
 PACKAGE_MANAGER="${PM:-"npm"}"
