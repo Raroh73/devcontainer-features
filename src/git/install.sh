@@ -11,7 +11,7 @@ fi
 
 case "${ID}" in
   fedora)
-    INSTALL_GIT="dnf --assumeyes install git-core && dnf clean all"
+    INSTALL_GIT="dnf install --assumeyes git-core && dnf clean all"
     ;;
   *)
     echo "${NAME} currently is not supported."

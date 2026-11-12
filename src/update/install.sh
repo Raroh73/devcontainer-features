@@ -11,7 +11,7 @@ fi
 
 case "${ID}" in
   fedora)
-    UPDATE_PACKAGES="dnf --assumeyes update && dnf clean all"
+    UPDATE_PACKAGES="dnf update --assumeyes && dnf clean all"
     ;;
   *)
     echo "${NAME} currently is not supported."

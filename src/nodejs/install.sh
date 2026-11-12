@@ -14,10 +14,10 @@ fi
 
 case "${ID}" in
   fedora)
-    INSTALL_NODEJS="dnf --assumeyes install nodejs${NODEJS_VERSION} && dnf clean all"
-    INSTALL_NPM="dnf --assumeyes install nodejs-npm && dnf clean all"
-    INSTALL_PNPM="dnf --assumeyes install pnpm && dnf clean all"
-    INSTALL_YARN="dnf --assumeyes install yarnpkg && dnf clean all"
+    INSTALL_NODEJS="dnf install --assumeyes nodejs${NODEJS_VERSION} && dnf clean all"
+    INSTALL_NPM="dnf install --assumeyes nodejs-npm && dnf clean all"
+    INSTALL_PNPM="dnf install --assumeyes pnpm && dnf clean all"
+    INSTALL_YARN="dnf install --assumeyes yarnpkg && dnf clean all"
     ;;
   *)
     echo "${NAME} currently is not supported."

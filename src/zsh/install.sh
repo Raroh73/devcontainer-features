@@ -13,7 +13,7 @@ fi
 
 case "${ID}" in
   fedora)
-    INSTALL_ZSH="dnf --assumeyes install su which zsh && dnf clean all"
+    INSTALL_ZSH="dnf install --assumeyes su which zsh && dnf clean all"
     ;;
   *)
     echo "${NAME} currently is not supported."
