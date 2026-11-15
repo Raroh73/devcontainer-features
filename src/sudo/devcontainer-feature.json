@@ -1,0 +1,9 @@
+{
+  "name": "Sudo",
+  "id": "sudo",
+  "description": "Install Sudo.",
+  "version": "0.0.1",
+  "installsAfter": [
+    "ghcr.io/raroh73/devcontainer-features/update"
+  ]
+}
