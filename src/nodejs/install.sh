@@ -25,7 +25,7 @@ esac
 echo "Installing required packages..."
 eval "$INSTALL_REQUIRED_PACKAGES"
 
-su "$_REMOTE_USER" --login --shell /bin/bash --command "NODEJS_VERSION='${NODEJS_VERSION}' PACKAGE_MANAGER='${PACKAGE_MANAGER}' bash -s" << 'EOF'
+su "$_REMOTE_USER" --login --command "NODEJS_VERSION='${NODEJS_VERSION}' PACKAGE_MANAGER='${PACKAGE_MANAGER}' $SHELL -s" << 'EOF'
 set -euo pipefail
 
 echo 'Installing NVM...'
