@@ -10,8 +10,8 @@ if [ "$(id --user)" -ne 0 ]; then
 fi
 
 case "${ID}" in
-  fedora)
-    UPDATE_PACKAGES="dnf update --assumeyes && dnf clean all"
+  debian)
+    UPDATE_PACKAGES="apt-get update && apt-get upgrade --assume-yes --no-install-recommends && apt-get clean"
     ;;
   *)
     echo "${NAME} currently is not supported."

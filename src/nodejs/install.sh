@@ -13,11 +13,8 @@ if [ "$(id --user)" -ne 0 ]; then
 fi
 
 case "${ID}" in
-  fedora)
-    INSTALL_NODEJS="dnf install --assumeyes nodejs${NODEJS_VERSION} && dnf clean all"
-    INSTALL_NPM="dnf install --assumeyes nodejs-npm && dnf clean all"
-    INSTALL_PNPM="dnf install --assumeyes pnpm && dnf clean all"
-    INSTALL_YARN="dnf install --assumeyes yarnpkg && dnf clean all"
+  debian)
+    INSTALL_REQUIRED_PACKAGES="apt-get update && apt-get install --assume-yes --no-install-recommends curl && apt-get clean"
     ;;
   *)
     echo "${NAME} currently is not supported."
@@ -25,22 +22,30 @@ case "${ID}" in
     ;;
 esac
 
+echo "Installing required packages..."
+eval "$INSTALL_REQUIRED_PACKAGES"
+
+echo "Installing NVM..."
+su "$_REMOTE_USER" --command 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.41.0/install.sh | bash'
+nvm --version
+
 echo "Installing Node.js..."
-eval "$INSTALL_NODEJS"
+nvm install "${NODEJS_VERSION}"
 node --version
 
 echo "Installing selected package manager..."
 case "${PACKAGE_MANAGER}" in
   npm)
-    eval "$INSTALL_NPM"
     npm --version
     ;;
   pnpm)
-    eval "$INSTALL_PNPM"
+    npm install -g corepack
+    corepack enable pnpm
     pnpm --version
     ;;
   yarn)
-    eval "$INSTALL_YARN"
+    npm install -g corepack
+    corepack enable yarn
     yarn --version
     ;;
 esac

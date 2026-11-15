@@ -10,8 +10,8 @@ if [ "$(id --user)" -ne 0 ]; then
 fi
 
 case "${ID}" in
-  fedora)
-    INSTALL_GIT="dnf install --assumeyes git-core && dnf clean all"
+  debian)
+    INSTALL_GIT="apt-get update && apt-get install --assume-yes --no-install-recommends git && apt-get clean"
     ;;
   *)
     echo "${NAME} currently is not supported."

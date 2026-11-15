@@ -12,8 +12,8 @@ if [ "$(id --user)" -ne 0 ]; then
 fi
 
 case "${ID}" in
-  fedora)
-    INSTALL_ZSH="dnf install --assumeyes su which zsh && dnf clean all"
+  debian)
+    INSTALL_ZSH="apt-get update && apt-get install --assume-yes --no-install-recommends zsh && apt-get clean"
     ;;
   *)
     echo "${NAME} currently is not supported."
