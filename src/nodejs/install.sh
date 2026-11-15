@@ -27,7 +27,7 @@ eval "$INSTALL_REQUIRED_PACKAGES"
 
 echo "Installing NVM..."
 su "$_REMOTE_USER" --command 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.41.0/install.sh | bash'
-su "$_REMOTE_USER" --login --command  'source "$HOME/.nvm/nvm.sh" && nvm --version'
+su "$_REMOTE_USER" --login --shell /bin/bash --command  'source "$HOME/.nvm/nvm.sh" && nvm --version'
 
 echo "Installing Node.js..."
 nvm install "${NODEJS_VERSION}"
