@@ -13,7 +13,7 @@ fi
 
 case "${ID}" in
   debian)
-    INSTALL_ZSH="apt-get update && apt-get install --assume-yes --no-install-recommends curl zsh && apt-get clean"
+    INSTALL_ZSH="apt-get update && apt-get install --assume-yes --no-install-recommends ca-certificates curl zsh && apt-get clean"
     ;;
   *)
     echo "${NAME} currently is not supported."
