@@ -14,7 +14,7 @@ fi
 
 case "${ID}" in
   debian)
-    INSTALL_REQUIRED_PACKAGES="apt-get update && apt-get install --assume-yes --no-install-recommends ca-certificates curl && apt-get clean"
+    INSTALL_REQUIRED_PACKAGES="apt-get update && apt-get install --assume-yes --no-install-recommends ca-certificates curl libatomic1 && apt-get clean"
     ;;
   *)
     echo "${NAME} currently is not supported."
