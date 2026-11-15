@@ -25,16 +25,20 @@ esac
 echo "Installing required packages..."
 eval "$INSTALL_REQUIRED_PACKAGES"
 
+su "$_REMOTE_USER" --login --shell /bin/bash --command << EOF
+set -euo pipefail
+
 echo "Installing NVM..."
-su "$_REMOTE_USER" --command 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.41.0/install.sh | bash'
-su "$_REMOTE_USER" --login --shell /bin/bash --command  'source "$HOME/.nvm/nvm.sh" && nvm --version'
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.41.0/install.sh | bash
+source "$HOME/.nvm/nvm.sh"
+nvm --version
 
 echo "Installing Node.js..."
-nvm install "${NODEJS_VERSION}"
+nvm install '${NODEJS_VERSION}'
 node --version
 
 echo "Installing selected package manager..."
-case "${PACKAGE_MANAGER}" in
+case '${PACKAGE_MANAGER}' in
   npm)
     npm --version
     ;;
@@ -49,5 +53,6 @@ case "${PACKAGE_MANAGER}" in
     yarn --version
     ;;
 esac
+EOF
 
 echo "Done!"
