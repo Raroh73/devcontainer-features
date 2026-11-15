@@ -30,7 +30,7 @@ set -euo pipefail
 
 echo 'Installing NVM...'
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.41.0/install.sh | bash
-source \"$HOME/.nvm/nvm.sh\"
+source $HOME/.nvm/nvm.sh
 nvm --version
 
 echo 'Installing Node.js...'
